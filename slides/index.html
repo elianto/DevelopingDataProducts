@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reproducible Pitch Presentation</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Reproducible Pitch Presentation">
+  <meta name="author" content="Visualization of the Breast Cancer Wisconsin (Diagnostic) Data Set">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Reproducible Pitch Presentation</h1>
+    <h2>Developing Data Products project coursera</h2>
+    <p>Visualization of the Breast Cancer Wisconsin (Diagnostic) Data Set<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>&quot;Worldwide, breast cancer is the most common invasive cancer in women. Breast cancer comprises 22.9% of invasive cancers in women and 16% of all female cancers. In 2012, it comprised 25.2% of cancers diagnosed in women, making it the most common female cancer. [...] Breast cancer screening refers to testing otherwise-healthy women for breast cancer in an attempt to achieve an earlier diagnosis under the assumption that early detection will improve outcomes.&quot; [1].</p>
+
+<p>The Breast Cancer Wisconsin (Diagnostic) Data Set provides data on benign and malign breast cancer. These data are publicly available at the Machine Learning Repository. This dataset comprises 458 (65.5%) benign istances and 241 (34.5%) malignant istances [2].</p>
+
+<p>REF:</p>
+
+<p>[1]: Wikipedia [<a href="http://en.wikipedia.org/wiki/Breast_cancer">http://en.wikipedia.org/wiki/Breast_cancer</a>]</p>
+
+<p>[2]: Lichman, M. (2013). UCI Machine Learning Repository [<a href="http://archive.ics.uci.edu/ml">http://archive.ics.uci.edu/ml</a>]. Irvine, CA: University of California, School of Information and Computer Science.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Why a Shiny App?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Before starting to apply statistical and/or machine learnig frameworks to build a classifier, an important step is to get a feeling about the data.</p>
+
+<p>The better feeling we have with the data, the better classifier we will be able to develop.</p>
+
+<p>The proposed Shiny app is a simple visualization platform of these data, which allows the user to choose two variables at the time and :</p>
+
+<ol>
+<li>Plot them against each other</li>
+<li>See the basic summary of each of the two variables</li>
+<li>Find out how well the second variable predicts the first one (using a simple linear model)</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>What the data looks like?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Here we load, compute, and print the the summaries of the Class variable and we plot the correspondent histogram:</p>
+
+<pre><code class="r">data &lt;- read.csv(&quot;breast-cancer-wisconsin.csv&quot;)
+summary(data$Class)
+</code></pre>
+
+<pre><code>## benign malign 
+##    458    241
+</code></pre>
+
+<pre><code class="r">plot(data$Class)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Conclusion</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Thanks for your attention!</p>
+
+<p>Please try out the Shiny app</p>
+
+<p>at this URL</p>
+
+<p>[<a href="http://en.wikipedia.org/">http://en.wikipedia.org/</a>]</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Introduction'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Why a Shiny App?'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='What the data looks like?'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Conclusion'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
